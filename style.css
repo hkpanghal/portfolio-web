@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Gilroy-Semi;
+    src: url("assets/fonts/Gilroy-SemiBold.f3ed44cd.ttf");
+}
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url("assets/fonts/Gilroy-Medium.e7e7c091.ttf");
+}
+@font-face {
+    font-family: Mazius;
+    src: url("assets/fonts/Mazius-Extraitalic.121a71a7.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+
+ html,body {
+  height: 100%;
+  width: 100%;
+}
+
+
+#main{
+    width: 100%;
+    background-color: #dadada5f;
+}
+
+#navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0 5vw;
+}
+#navbar a{
+    text-decoration: none;
+    font-family: Gilroy-Semi;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+}
+#navbar .bline{
+    display: inline-block;
+    height: 1px;
+    background-color: black;
+}
+#page1{
+    min-height: 75vh;
+    display: flex;
+    align-items: flex-end;
+}
+#page1 .content{
+    width: 100%;
+    padding: 0 5vw;
+    line-height:0.9;
+  
+}
+
+.content #upper,.content #lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content #lower h1{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.content #lower #visual{
+    font-size: 9vw;
+    font-family: Mazius;
+    font-weight: 100;
+    color: #14cf93;
+    display: inline-block;
+
+}
+.content #upper #uleft{
+    display: flex;
+    gap: 5vw;
+    font-family: Gilroy-Semi;
+    height: fit-content;
+    color: #11111150;
+    line-height: 1;
+}
+.content h1{
+   width: fit-content;
+   font-weight: 100;
+   font-size: 11.8vw;
+   font-family: Gilroy-Medium;
+}
