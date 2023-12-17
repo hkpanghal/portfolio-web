@@ -20,3 +20,17 @@ function navBar(){
 }
 
 navBar()
+
+function p2CardAnim(){
+    gsap.from(".cards",{
+        rotate:-25,
+        duration:0.5,
+        scrollTrigger:{
+            scroller:"body",
+            trigger:".cards",
+            scrub:1,
+
+        }
+    })
+}
+p2CardAnim()
