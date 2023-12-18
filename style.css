@@ -61,7 +61,7 @@ box-sizing: border-box;
     width: 100%;
     padding: 0 5vw;
     line-height:0.9;
-  
+    
 }
 
 .content #upper,.content #lower{
@@ -118,7 +118,7 @@ box-sizing: border-box;
     justify-content: center;
 }
 #page2 #cards-section{
-    height: 110vh;
+    min-height: 100vh;
     width: 60%;
 }
 #page2 #cards-section img{
@@ -143,8 +143,7 @@ box-sizing: border-box;
     font-family: Mazius;
 }
 #cards-container{
-    height: 100%;
-    display: flex;
+    min-height: 100vh;
     position: relative;
 }
 #cards-container .cards{
@@ -174,4 +173,208 @@ box-sizing: border-box;
     left: 30%;
     top: 20%;
     transform:rotate(-10deg);
+}
+
+#page3{
+    min-height: 100vh;
+    padding: 0 5vw;
+    position: relative;
+    background-color: #dadada5f;
+}
+#page3 #data-container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;
+    
+}
+#data-container #dupper{
+    flex-basis: 50%;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+#data-container #dlower{
+    flex-basis: 50%;
+    display: flex;
+    gap: 1vw;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#dupper #dup1{
+    font-family: Gilroy-Semi;
+}
+#dupper #dup2{
+    font-size: 2vw;
+    font-family: Gilroy-Semi;
+}
+
+#dlower h1{
+    font-family: Gilroy-Medium;
+    font-size: 8vw;
+    font-weight: 500;
+}
+#dlower h1 #dh1s{
+    font-size: large;
+}
+#dlower h1 #dh1R{
+    font-family: Mazius;
+    color:#14cf93;
+}
+#page3 #uarrow{
+    position: absolute;
+    color: black;
+    background-color: gray;
+}
+#page3 #darrow{
+    color: black;
+    background-color: gray;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////// for mobile //////////////////////////////////////////////////////////// */
+
+@media (max-width: 700px){
+    #page1{
+        
+        align-items: center;
+        background-color: #dadada5f;
+    }
+    #page1 .content{
+        width: 100%;
+        padding: 0 5vw;
+        line-height:1;
+        position: relative;
+    }
+
+    .content #upper,.content #lower{
+        display: flex;
+        align-items: center;
+
+    }
+    
+    .content #lower h1{
+        align-items: flex-end;
+        flex-direction: column;
+    
+    }
+    .content #lower #visual{
+        font-size: 18vw;
+        
+    }
+    .content #lower #visual::before{
+        content: "---";
+    }
+    .content #upper #uleft{
+        justify-content: space-between;
+        position: absolute;
+        bottom: -70%;
+        width: 90%;
+    }
+
+    .content #upper #uleft p{
+        font-size: 13px;
+    }
+    .content h1{
+       font-size: 19vw;
+    }
+    .content #lower #arrow{
+        display: none;
+    }
+
+
+
+    #page2{
+
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    #page2 #about-section{
+        
+        width: 100%;
+        background-color: transparent;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 10vw 5vw;
+        justify-content: center;
+    }
+
+    #page2 #about-section #about-text{
+        font-size: 7.5vw;
+        font-family: Gilroy-Medium;
+        text-transform: capitalize;
+        
+    }
+    #page2 #cards-section{
+         width: 100%;
+         overflow: hidden;
+    }
+    #page2 #cards-section img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        filter: grayscale();
+        transition: filter ease 1s;
+    }
+    
+   
+    #cards-container{
+        position: relative;
+        transform: translateY(15%);
+    }
+    #cards-container .cards{
+        height: 90vw;
+        width: 65%;
+    }
+    
+
+
+    #page3{
+        min-height: 100vh;
+        padding: 0 5vw;
+        position: relative;
+        background-color: #dadada5f;
+    }
+    #page3 #data-container{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vw;
+        
+    }
+    #data-container #dupper{
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 30%;
+    }
+    #data-container #dlower{
+        flex-basis: 50%;
+        display: flex;
+        gap:0;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #dupper #dup2{
+        font-size: 8vw;
+        margin-top: 5%;
+
+    }
+    
+    #dlower h1{
+        font-size: 20vw;
+
+    }
+
+    
 }
