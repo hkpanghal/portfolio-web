@@ -247,6 +247,7 @@ box-sizing: border-box;
     display: flex;
     align-items: flex-end;
     position: relative;
+    padding: 5vw 0;
 }
 
 #page4 #p4right,#page4 #p4left{
@@ -313,6 +314,11 @@ box-sizing: border-box;
     margin: 1vw 0;
     text-align: center;
     text-transform:uppercase;
+    opacity: 0;
+}
+
+.commonpart .upper{
+    overflow: hidden;
 }
 .commonpart .lower{
     display: flex;
@@ -329,16 +335,19 @@ box-sizing: border-box;
     font-size: 2vw;
     font-family: Gilroy-Semi;
 }
-.commonpart .lower #arrow-container{
-   
+#page4 .commonpart #arrow-container{
     background-color: bisque;
-    height: 18%;
-    width: 18%;
-    padding: 1.5vw;
+    height: fit-content;
+    width: fit-content;
+    padding: 1vw;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#page4 #arrow-container #arrow{
+    height:3vw;
+    width:3vw;
 }
 #page4 #dynamic-crsr{
     position: fixed;
@@ -356,6 +365,7 @@ box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: 1vw;
+   
 }
 #page4 #dynamic-crsr .dcupper .circle{
     background-color: rgba(222, 184, 135, 0.784);
@@ -523,5 +533,92 @@ box-sizing: border-box;
 
     }
 
+
+
+    #page4{
+        min-height: 100vh;
+        width: 100%;
+        background-color:#b113135f;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #page4 #p4right, #page4 #p4left{
+        width: 100%;
+        height:55vh;
+        padding: 5vw;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    #page4 #p4left #img-container-left, #page4 #p4right #img-container-right{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        margin-left: 0;
+        position: relative;
+       
+    }
+    
+    #page4  .commonpart{
+        padding-left: 2vw;
+        position: absolute;
+        bottom: 0;
+        width: fit-content;
+    }
+    .commonpart .upper #up1 ,.commonpart .upper #up2{
+
+        padding: 3vw 5vw;
+        margin: 1.5vw 0;
+    }
+    .commonpart .lower{
+        display: flex;
+        gap: 1.5vw;
+        align-items: center;
+    }
+    .commonpart .lower h2{
+        width: fit-content;
+        padding: 4vw 8vw;
+        margin: 1vw 0;
+        font-size: 7vw;
+        font-weight: 200;
+    }
+    #page4 .commonpart #arrow-container{
+       
+        height: fit-content;
+        width: fit-content;
+        padding: 3vw;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   #page4 #arrow-container #arrow{
+        height:10vw;
+        width:10vw;
+   }
+    #page4 #dynamic-crsr{
+        height: 45vw;
+        width: 45vw;
+    }
+    #page4 #dynamic-crsr .dcupper{
+        gap: 2vw;
+    }
+    #page4 #dynamic-crsr .dcupper .circle{
+        height:100%;
+        width: 20%;
+    }
+    #page4 #dynamic-crsr .dcupper h3{
+
+        padding: 2vw 3vw;
+        border-radius: 20px;
+        font-family: Gilroy-Medium;
+        font-weight: 100;
+        font-size: medium;
+    }
+    
     
 }

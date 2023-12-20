@@ -80,3 +80,38 @@ function p4DynamicCrsr(){
    
 }
 p4DynamicCrsr()
+
+function p4CommonPartAnim(){
+
+
+    document.querySelectorAll(".dmove").forEach(function(elem){
+        
+
+            // gsap.to(`#${elem.getAttribute("id")} .commonpart .upper p`,{
+            //     display:"none",
+            //     opacity:0,
+            // })
+        elem.addEventListener("mouseenter",function(){
+
+            gsap.to( `#${elem.getAttribute("id")} .commonpart .upper p`,{
+        
+                opacity:1,
+                duration:1,
+                stagger:0.25,
+                
+            })
+        })
+        elem.addEventListener("mouseleave",function(){
+            gsap.to( `#${elem.getAttribute("id")} .commonpart .upper p`,{
+        
+                opacity:0,
+                duration:1,
+                stagger:0.25,
+                
+            })
+        })
+        
+    })
+    
+}
+p4CommonPartAnim()
