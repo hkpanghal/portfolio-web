@@ -224,17 +224,164 @@ box-sizing: border-box;
     color:#14cf93;
 }
 #page3 #uarrow{
+    height: 40px;
+    width: 40px;
+
+}
+#page3 #uarrow .o-ui-arrow{
     position: absolute;
     color: black;
-    background-color: gray;
+    font-size: 20px;
+    background-color: black;
 }
-#page3 #darrow{
+#page3 #darrow .o-ui-arrow{
     color: black;
-    background-color: gray;
+    font-size: 20px;
+    background-color: black;
 }
 
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#dadada5f;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
 
+#page4 #p4right,#page4 #p4left{
+    position: relative;
+}
+#page4 #p4left #img-container-left{
+    height: 50vw;
+    width: 50vw;
+    border-radius: 15px;
+    margin-left: 5vw;
+    position: relative;
+}
 
+#img-container-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#page4 #p4right #img-container-right{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 15px;
+    margin-left: 7vw;
+    position: relative;
+}
+
+#page4 #p4right #img-container-right, #p4left #img-container-left:hover{
+    cursor: pointer;
+}
+#img-container-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#page4 .dmove img{
+    transition: filter ease 1s;
+}
+#page4 .dmove img:hover{
+    filter: grayscale(1);
+}
+#page4  .commonpart{
+    padding-left: 2vw;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+}
+#page4  .commonpart2{
+    width: 100%;
+}
+#page4 span{
+    font-family: Mazius;
+}
+.commonpart .upper #up1 ,.commonpart .upper #up2{
+    font-size: small;
+    font-family: Gilroy-Semi;
+    background-color: bisque;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 1vw 3vw;
+    margin: 1vw 0;
+    text-align: center;
+    text-transform:uppercase;
+}
+.commonpart .lower{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+.commonpart .lower h2{
+    border-radius: 40px;
+    width: fit-content;
+    padding: 1vw 5vw;
+    margin: 1vw 0;
+    text-align: center;
+    background-color: bisque;
+    font-size: 2vw;
+    font-family: Gilroy-Semi;
+}
+.commonpart .lower #arrow-container{
+   
+    background-color: bisque;
+    height: 18%;
+    width: 18%;
+    padding: 1.5vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page4 #dynamic-crsr{
+    position: fixed;
+    height: 20vw;
+    width: 20vw;
+    left: -20px;
+    top:-20px;
+    background-color: #14cf949c;
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+}
+#page4 #dynamic-crsr .dcupper{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#page4 #dynamic-crsr .dcupper .circle{
+    background-color: rgba(222, 184, 135, 0.784);
+    border: 2px solid white;
+    border-radius: 45%;
+    height: 3.5vw;
+    width: 3.5vw;
+}
+#page4 #dynamic-crsr .dcupper h3{
+    background-color: antiquewhite;
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    font-family: Gilroy-Medium;
+    font-weight: 100;
+}
+#page4 #dynamic-crsr .dclower{
+    height: 80%;
+    display: flex;
+    padding: 1vw;
+    background-color:rgba(255, 255, 255, 0.425);
+}
+#page4 #dynamic-crsr .dclower img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 /* //////////////////////////////////////////////////////////////// for mobile //////////////////////////////////////////////////////////// */
 
 @media (max-width: 700px){
