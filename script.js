@@ -118,3 +118,65 @@ function CommonPartAnim(){
     
 }
 CommonPartAnim()
+
+
+function buttonAnim(){
+
+    document.querySelectorAll(".button").forEach(function(elem){
+
+
+        elem.addEventListener("mouseenter",function(){
+            gsap.to(elem.childNodes[0],{
+                width:"100%",
+                opacity:1,
+                duration:0.5,
+            })
+        })
+        elem.addEventListener("mouseleave",function(){
+           
+            t = gsap.timeline()
+            t.to(elem.childNodes[0],{
+                opacity:0,
+                duration:0.2,
+            })
+            t.to(elem.childNodes[0],{
+                width:"0%",
+            })
+           
+        })
+    })
+   
+}
+buttonAnim()
+
+
+function p7ListAnim(){
+
+    document.querySelectorAll("#p7-list li").forEach(function(elem){
+
+        elem.addEventListener("mouseenter",function(){
+            let t = gsap.timeline()
+            t.to(elem.children[1],{
+                width:"0%",
+                duration:0.2,
+            })  
+            t.from(elem.children[1],{
+                width:"100%",
+                duration:0.2,
+            }) 
+            
+            gsap.to(elem.children[0].children,{
+                opacity:1
+            })
+        })
+
+        elem.addEventListener("mouseleave",function(){
+            gsap.to(elem.children[0].children,{
+                opacity:0
+            })
+        })
+
+    })
+  
+}
+p7ListAnim()
