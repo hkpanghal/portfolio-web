@@ -24,7 +24,7 @@ box-sizing: border-box;
 
 #main{
     width: 100%;
-  
+    background-color:#dadada5f;
 }
 
 #navbar{
@@ -55,7 +55,6 @@ box-sizing: border-box;
     min-height: 75vh;
     display: flex;
     align-items: flex-end;
-    background-color: #dadada5f;
 }
 #page1 .content{
     width: 100%;
@@ -101,10 +100,9 @@ box-sizing: border-box;
 #page2{
     min-height:125vh;
     width: 100%;
-    background-color: #14cf93;
     display: flex;
     align-items: center;
-    background-color: #dadada5f;
+
 }
 
 
@@ -179,7 +177,7 @@ box-sizing: border-box;
     min-height: 100vh;
     padding: 0 5vw;
     position: relative;
-    background-color: #dadada5f;
+
 }
 #page3 #data-container{
     height: 90vh;
@@ -243,7 +241,6 @@ box-sizing: border-box;
 #page4{
     min-height: 100vh;
     width: 100%;
-    background-color:#dadada5f;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -286,19 +283,20 @@ box-sizing: border-box;
     border-radius: 15px;
 }
 
-#page4 .dmove img{
+.dmove img{
     transition: filter ease 1s;
 }
-#page4 .dmove img:hover{
+.dmove img:hover{
     filter: grayscale(1);
+    cursor: pointer;
 }
-#page4  .commonpart{
+.commonpart{
     padding-left: 2vw;
     position: absolute;
     bottom: 0;
     width: 60%;
 }
-#page4  .commonpart2{
+.commonpart2{
     width: 100%;
 }
 #page4 span{
@@ -335,21 +333,21 @@ box-sizing: border-box;
     font-size: 2vw;
     font-family: Gilroy-Semi;
 }
-#page4 .commonpart #arrow-container{
+.commonpart #arrow-container{
     background-color: bisque;
     height: fit-content;
     width: fit-content;
-    padding: 1vw;
+    padding: 1.5vw;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#page4 #arrow-container #arrow{
-    height:3vw;
-    width:3vw;
+.commonpart #arrow-container #arrow{
+    height:1.5vw;
+    width:1.5vw;
 }
-#page4 #dynamic-crsr{
+#dynamic-crsr{
     position: fixed;
     height: 20vw;
     width: 20vw;
@@ -360,38 +358,64 @@ box-sizing: border-box;
     pointer-events: none;
     display: none;
 }
-#page4 #dynamic-crsr .dcupper{
+#dynamic-crsr .dcupper{
     height: 20%;
     display: flex;
     align-items: center;
     gap: 1vw;
    
 }
-#page4 #dynamic-crsr .dcupper .circle{
+#dynamic-crsr .dcupper .circle{
     background-color: rgba(222, 184, 135, 0.784);
     border: 2px solid white;
     border-radius: 45%;
     height: 3.5vw;
     width: 3.5vw;
 }
-#page4 #dynamic-crsr .dcupper h3{
+#dynamic-crsr .dcupper h3{
     background-color: antiquewhite;
     padding: 1vw 2vw;
     border-radius: 20px;
     font-family: Gilroy-Medium;
     font-weight: 100;
 }
-#page4 #dynamic-crsr .dclower{
+#dynamic-crsr .dclower{
     height: 80%;
     display: flex;
     padding: 1vw;
     background-color:rgba(255, 255, 255, 0.425);
 }
-#page4 #dynamic-crsr .dclower img{
+#dynamic-crsr .dclower img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5vw;
+    justify-content: center;
+}
+
+#page5 #p5-img-container{
+    height: 43vw;
+    width: 50%;
+    position: relative;
+}
+#page5 #p5-img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    
+}
+
+
 /* //////////////////////////////////////////////////////////////// for mobile //////////////////////////////////////////////////////////// */
 
 @media (max-width: 700px){
@@ -538,7 +562,6 @@ box-sizing: border-box;
     #page4{
         min-height: 100vh;
         width: 100%;
-        background-color:#b113135f;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -563,7 +586,7 @@ box-sizing: border-box;
        
     }
     
-    #page4  .commonpart{
+    .commonpart{
         padding-left: 2vw;
         position: absolute;
         bottom: 0;
@@ -586,32 +609,33 @@ box-sizing: border-box;
         font-size: 7vw;
         font-weight: 200;
     }
-    #page4 .commonpart #arrow-container{
+    .commonpart #arrow-container{
        
         height: fit-content;
         width: fit-content;
-        padding: 3vw;
+        padding: 5vw;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-   #page4 #arrow-container #arrow{
-        height:10vw;
-        width:10vw;
+    .commonpart #arrow-container #arrow{
+        height:5vw;
+        width:5vw;
+
    }
-    #page4 #dynamic-crsr{
+    #dynamic-crsr{
         height: 45vw;
         width: 45vw;
     }
-    #page4 #dynamic-crsr .dcupper{
+    #dynamic-crsr .dcupper{
         gap: 2vw;
     }
-    #page4 #dynamic-crsr .dcupper .circle{
+    #dynamic-crsr .dcupper .circle{
         height:100%;
         width: 20%;
     }
-    #page4 #dynamic-crsr .dcupper h3{
+    #dynamic-crsr .dcupper h3{
 
         padding: 2vw 3vw;
         border-radius: 20px;
@@ -620,5 +644,28 @@ box-sizing: border-box;
         font-size: medium;
     }
     
+
+    #page5{
+        min-height:70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5% 5vw;
+    }
+    
+    #page5 #p5-img-container{
+        height: 55vh;
+        width: 100%;
+        position: relative;
+    }
+    #page5 #p5-img-container img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        
+    }
+
     
 }

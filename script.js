@@ -35,8 +35,25 @@ function p2CardAnim(){
 }
 p2CardAnim()
 
-function p4DynamicCrsr(){
+
+function dynamicCrsrPosition(){
+
+    document.querySelector("#main").addEventListener("mousemove",function(dets){
+        gsap.to("#dynamic-crsr",{
+            x:dets.clientX,
+            y:dets.clientY,
+            duration:0.5,
+    
+        })
+    })
+}
+dynamicCrsrPosition();
+
+
+function DynamicCrsr(){
     let dcimg = document.querySelector("#dcimg")
+
+    
     document.querySelectorAll(".dmove").forEach(function(elem){
         
         elem.addEventListener("mouseenter",function(){
@@ -48,7 +65,7 @@ function p4DynamicCrsr(){
                 
             })
 
-            gsap.to("#page4",{
+            gsap.to("#main",{
                 backgroundColor:elem.getAttribute("data"),
                 duration:1,
             })
@@ -60,37 +77,24 @@ function p4DynamicCrsr(){
                 opacity:0
             })
 
-            gsap.to("#page4",{
+            gsap.to("#main",{
                 backgroundColor:"#dadada5f",
+                duration:1,
             })
         })
-        elem.addEventListener("mousemove",function(dets){
        
-
-            
-             gsap.to("#dynamic-crsr",{
-                 x:dets.clientX,
-                 y:dets.clientY,
-                 duration:0.5,
-     
-             })
-         })
     })
 
    
 }
-p4DynamicCrsr()
+DynamicCrsr()
 
-function p4CommonPartAnim(){
+function CommonPartAnim(){
 
 
     document.querySelectorAll(".dmove").forEach(function(elem){
         
-
-            // gsap.to(`#${elem.getAttribute("id")} .commonpart .upper p`,{
-            //     display:"none",
-            //     opacity:0,
-            // })
+    
         elem.addEventListener("mouseenter",function(){
 
             gsap.to( `#${elem.getAttribute("id")} .commonpart .upper p`,{
@@ -98,7 +102,6 @@ function p4CommonPartAnim(){
                 opacity:1,
                 duration:1,
                 stagger:0.25,
-                
             })
         })
         elem.addEventListener("mouseleave",function(){
@@ -114,4 +117,4 @@ function p4CommonPartAnim(){
     })
     
 }
-p4CommonPartAnim()
+CommonPartAnim()
