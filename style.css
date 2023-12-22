@@ -524,6 +524,259 @@ box-sizing: border-box;
     font-weight: 700;
 }
 
+
+#page8{
+    min-height: 60vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}  
+#page8 #top{
+    flex-basis: 20vh;
+    width: 100%;
+    /* background-color: #14cf93; */
+    background-image: url("https://abhishekjha.me/rip.f6d7c4dd.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20%;
+}
+#page8 #top #blend{
+    height: 50%;
+    background-color: #f2f2f2;
+   
+}
+#page8 #middle{
+    flex-basis: 30vh;
+    width: 100%;
+    padding: 0 5vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#page8 #middle h1{
+    font-family: Gilroy-Medium;
+    font-size: 10vw;
+    font-weight: 300;
+}
+#page8 #middle h1 span{
+    font-family: Mazius;
+    color: #14cf93;
+}
+#page8 #middle p{
+    font-family: Gilroy-Semi;
+    font-size: medium;
+    margin-right: 30%;
+    color: #11111150;
+}
+#page8 #bottom{
+    flex-basis: 10vh;
+    width: 100%;
+    padding: 1vw 5vw;
+    
+}
+#page8 #bottom #arrow{
+    font-size: 8vw;
+    width: fit-content;
+    height: fit-content;
+    font-family: Gilroy-Medium;
+    font-weight: 10;
+    color: #11111150;
+    transform: rotate(90deg);
+  
+}
+
+#page9{
+    min-height: 70vh;
+    width: 100%;
+    padding: 5vw;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#page9 #p9left{
+    width: 40%;
+    height: 35vw;
+
+}
+#page9 #p9right{
+    width: 60%;
+    height: 35vw;
+}
+#page9 #p9right ol{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1vw;
+}
+
+#page9 #p9right ol li{
+    flex-basis: 25%;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 1vw;
+}
+#page9 #p9right ol li p{
+    font-family: Gilroy-Semi;
+    font-size: small;
+    color: #11111150;
+}
+#page9 #p9right ol li h2{
+    font-family: Gilroy-Medium;
+    font-size: 2vw;
+    font-weight: 600;
+
+}
+#page9 #p9right ol li #p9arrow-box{
+    background-color: gray;
+    padding: 1.25vw;
+    border-radius: 100%;
+    color: white;
+}
+#page9 #p9right ol li #p9arrow{
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+  
+}
+#page9 #p9left p{
+    font-family: Gilroy-Semi;
+    font-size: medium;
+    color: #11111150;
+}
+#page9 #p9left h3{
+    font-family: Gilroy-Medium;
+    color: #11111150;
+    font-weight: 300;
+}
+#page9 #p9left img{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 20px;
+    margin: 1.5vw 0;
+}
+
+footer{
+    min-height: 120vh;
+    width: 100%;
+    background-color: #253b39;
+    position: relative;
+    padding: 5vw;
+    overflow: hidden;
+}
+footer #fbackground{
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+
+}
+footer #fbackground svg{
+    /* height: 100vh; */
+     width: 70%;
+     margin-right: 10%;
+    /* background-color: #14cf93; */
+
+}
+footer .fheader h1{
+    font-family: Gilroy-Medium;
+    text-align: center;
+    color: white;
+    font-size: 6vw;
+    font-weight: 300;
+    line-height: 1;
+  
+}
+
+footer .fbuttons{
+    display: flex;
+    gap: 2vw;
+    padding: 8vw 0;
+    align-items: center;
+    justify-content: center;
+ 
+   
+}
+footer button{
+    width: 40%;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: large;
+    background-color: transparent;
+    border: 1px solid white;
+    position: relative;
+    z-index: 1;
+    font-family: Gilroy-Medium;
+    color: white;
+}
+footer button span{
+    position: absolute;
+    display: block;
+    background-color:white;
+    height: 100%;
+    /* width: 100%; */
+    border-radius: 50px;
+    z-index: -1;
+    
+}
+
+footer button:hover{
+    cursor: pointer;
+    font-weight: 700;
+    color: black;
+}
+
+footer .fsocials{
+    display: flex;
+    align-items: center;
+    height: 15vw;
+    gap: 2vw;
+}
+footer .fsocials .contact{
+    flex-basis: 25%;
+    border-top: 2px solid white;
+    /* transition: all ease 1s; */
+}
+footer .fsocials .contact h2{
+    font-family: Gilroy-Medium;
+    color: white;
+    font-weight: 500;
+    margin: 1vw 0;
+}
+footer .fsocials .contact p{
+    /* font-family: Gilroy-Semi; */
+    color: white;
+ 
+}
+
+footer .fsocials .contact:hover{
+    background-color: #14cf93;
+    padding: 0.5vw;
+    cursor: pointer;
+}
+
+footer .fbottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+footer .fbottom p{
+    font-family: Gilroy-Semi;
+    color:#dadada;
+}
 /* //////////////////////////////////////////////////////////////// for mobile //////////////////////////////////////////////////////////// */
 
 @media (max-width: 700px){
@@ -826,5 +1079,170 @@ box-sizing: border-box;
     #page7 button{
         width: 100%;
         height: 15vw;
+    }  
+
+    #page8 #middle{
+        flex-basis: 30vh;
+        width: 100%;
+        padding: 0 5vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        gap: 2vw;
     }
+    #page8 #middle h1{
+        font-family: Gilroy-Medium;
+        font-size: 18vw;
+        font-weight: 300;
+    }
+
+    #page8 #middle p{
+        font-family: Gilroy-Semi;
+        font-size: medium;
+        margin-left: 20%;
+        margin-right: 0;
+        color: #11111150;
+    
+
+    }
+    #page8 #bottom #arrow{
+        font-size: 15vw;
+      
+    }
+
+    #page9{
+        min-height: 70vh;
+        width: 100%;
+        padding: 5vw;
+        display: flex;
+        gap: 1vw;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        flex-direction: column-reverse;
+    }
+    
+    #page9 #p9left{
+        width: 100%;
+        height: 50vh;
+    
+    }
+    #page9 #p9right{
+        width: 100%;
+        height: 50vh;
+    }
+    #page9 #p9right ol{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 1vw;
+    }
+    
+    #page9 #p9right ol li{
+        flex-basis: 25%;
+        border-bottom: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding: 0 1vw;
+    }
+    #page9 #p9right ol li p{
+        font-family: Gilroy-Semi;
+        font-size: x-small;
+        color: #11111150;
+    }
+    #page9 #p9right ol li h2{
+        font-family: Gilroy-Medium;
+        font-size: small;
+        font-weight: 600;
+    
+    }
+    #page9 #p9right ol li #p9arrow-box{
+        background-color: gray;
+        padding:3vw;
+        border-radius: 100%;
+        color: white;
+    }
+    #page9 #p9right ol li #p9arrow{
+        height: 15px;
+        width: 18px;
+        transform: rotate(45deg);
+      
+    }
+    #page9 #p9left p{
+        font-family: Gilroy-Semi;
+        font-size: medium;
+        color: #11111150;
+    }
+    #page9 #p9left h3{
+        font-family: Gilroy-Medium;
+        color: #11111150;
+        font-weight: 300;
+    }
+    #page9 #p9left img{
+        height: 60%;
+        width: 70%;
+        border-radius: 20px;
+        margin: 1.5vw 0;
+    }
+    footer{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #253b39;
+        position: relative;
+        padding: 5vw;
+        overflow: hidden;
+    }
+   
+
+    footer .fheader h1{
+        font-size: 8vw;
+        font-weight: 300;
+        line-height: 1.2;
+      
+    }
+    
+    footer .fbuttons{
+        display: flex;
+        gap: 5vw;
+        padding: 10vw 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* background-color: #14cf93; */
+     
+    }
+    footer button{
+        width: 100%;
+        height: 15vw;
+    }
+   
+    footer .fsocials{
+        display: flex;
+        align-items: center;
+        height: 40vh;
+        gap: 2vw;
+        flex-direction: column;
+    }
+    footer .fsocials .contact{
+        width: 100%;
+    }
+    footer .fsocials .contact h2{
+        font-size: 5vw;
+    }
+    footer .fsocials .contact p{
+        font-size: x-large;
+    }
+    
+    
+    footer .fbottom{
+        flex-direction: column-reverse; 
+        gap: 2vw;
+        padding: 7vw 0;
+    }
+ 
 }
