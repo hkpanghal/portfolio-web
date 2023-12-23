@@ -62,7 +62,7 @@ function p2CardAnim(){
         rotate:-25,
         duration:0.5,
         scrollTrigger:{
-            scroller:"#main",
+            scroller:" body #main",
             trigger:".cards",
             scrub:1,
 
@@ -71,7 +71,61 @@ function p2CardAnim(){
 }
 p2CardAnim()
 
+function p2AboutAnim(){
+    gsap.from("#page2 #about-section ",{
+        x:"-100%",
+        // duration:1,
+        delay:-1,
+        ease:Expo.in,
+        scrollTrigger:{
+            scroller:"body #main",
+            trigger:"#page2 #about-section",
+            // markers:true,
+            // start:"top 70%",
+            end:"top 40%",
+            scrub:3,
+    
+        }
+        
+    })
 
+}
+
+p2AboutAnim()
+
+function p3TextAnim(){
+
+    gsap.from("#page3 #dupper p",{
+         y:"100%",
+        ease:Expo.In,
+        duration:0.5,
+        opacity:0,
+        scrollTrigger:{
+            scroller:"body #main",
+            trigger:"#page3 #dupper p, #page3 #dlower h1 ",
+            // markers:true,
+            start:"top 70%",
+            end:"top 40%",
+    
+        }
+    })
+    gsap.from(" #page3 #dlower h1 ",{
+         y:"100%",
+        ease:Expo.In,
+        duration:0.5,
+        opacity:0,
+        scrollTrigger:{
+            scroller:"body #main",
+            trigger:" #page3 #dlower h1 ",
+            // markers:true,
+            start:"top 105%",
+            // end:"top 40%",
+    
+        }
+    })
+}
+
+p3TextAnim()
 function dynamicCrsrPosition(){
 
     document.querySelector("#main").addEventListener("mousemove",function(dets){
@@ -216,3 +270,22 @@ function p7ListAnim(){
   
 }
 p7ListAnim()
+
+
+function fadeMe(){
+    document.querySelectorAll(".fade-me").forEach(function(elem){
+       gsap.to(elem,{
+        color:"#dadada",
+        duration:1,
+        stagger:0.25,
+        scrollTrigger:{
+            scroller:"#main",
+            trigger:elem,
+            scrub:3,
+    
+        }
+       })
+    })
+}
+// fadeMe()
+
