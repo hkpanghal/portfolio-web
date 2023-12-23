@@ -256,6 +256,7 @@ box-sizing: border-box;
     border-radius: 15px;
     margin-left: 5vw;
     position: relative;
+    overflow: hidden;
 }
 
 #img-container-left img{
@@ -271,6 +272,7 @@ box-sizing: border-box;
     border-radius: 15px;
     margin-left: 7vw;
     position: relative;
+    overflow: hidden;
 }
 
 #page4 #p4right #img-container-right, #p4left #img-container-left:hover{
@@ -406,6 +408,8 @@ box-sizing: border-box;
     height: 43vw;
     width: 50%;
     position: relative;
+    overflow: hidden;
+    border-radius: 20px;
 }
 #page5 #p5-img-container img{
     height: 100%;
@@ -429,6 +433,7 @@ box-sizing: border-box;
     width: 30vw;
     margin-top: 60vh;
     border-radius: 20px;
+    overflow: hidden;
     position: relative;
 }
 #page6 #p6-img-container-right{
@@ -436,6 +441,7 @@ box-sizing: border-box;
     height: 40vw;
     width: 45vw;
     border-radius: 20px;
+    overflow: hidden;
     position: relative;
 }
 #page6 #p6-img-container-left img,#page6 #p6-img-container-right img{
@@ -639,6 +645,10 @@ box-sizing: border-box;
     padding: 1.25vw;
     border-radius: 100%;
     color: white;
+    transition: transform ease 0.2s;
+}
+#page9 #p9right ol li #p9arrow-box:hover{
+    transform: rotate(-25deg);
 }
 #page9 #p9right ol li #p9arrow{
     height: 20px;
@@ -679,13 +689,18 @@ footer #fbackground{
     align-items: center;
     justify-content: center;
     /* background-color: red; */
+    top: 40%;
+    z-index: -1;
+   
 
 }
 footer #fbackground svg{
-    /* height: 100vh; */
-     width: 70%;
+    /* height: 60vh; */
+     /* width: 70%; */
      margin-right: 10%;
     /* background-color: #14cf93; */
+    /* background-color: red; */
+    /* transform: translateY(30%); */
 
 }
 footer .fheader h1{
@@ -748,13 +763,31 @@ footer .fsocials{
 footer .fsocials .contact{
     flex-basis: 25%;
     border-top: 2px solid white;
-    /* transition: all ease 1s; */
+    z-index: 10;
+    transition: all ease 0.25s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .fsocials .contact i{
+    font-size: xx-large;
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.35vw;
+    font-weight: 100;
 }
 footer .fsocials .contact h2{
     font-family: Gilroy-Medium;
     color: white;
     font-weight: 500;
     margin: 1vw 0;
+}
+footer .fsocials .contact #gfright svg{
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.5vw;
+    color: black;
 }
 footer .fsocials .contact p{
     /* font-family: Gilroy-Semi; */
@@ -763,9 +796,11 @@ footer .fsocials .contact p{
 }
 
 footer .fsocials .contact:hover{
-    background-color: #14cf93;
-    padding: 0.5vw;
+    background-color: #14cf9479;
+    padding: 1vw;
     cursor: pointer;
+    border-radius: 20px;
+   
 }
 
 footer .fbottom{
@@ -1235,7 +1270,7 @@ footer .fbottom p{
         font-size: 5vw;
     }
     footer .fsocials .contact p{
-        font-size: x-large;
+        font-size: small;
     }
     
     
@@ -1244,5 +1279,24 @@ footer .fbottom p{
         gap: 2vw;
         padding: 7vw 0;
     }
+    footer .fbottom p{
+        font-size: small;
+    }
  
+    footer .fsocials .contact i{
+        font-size: x-large;
+        background-color: white;
+        border-radius: 100%;
+        padding: 2vw;
+        font-weight: 100;
+    }
+   
+    footer .fsocials .contact #gfright svg{
+        background-color: white;
+        border-radius: 100%;
+        padding: 2vw;
+        color: black;
+    }
+
+    
 }
