@@ -33,7 +33,7 @@ ScrollTrigger.refresh();
 
 }
 
-smoothScroll()
+// smoothScroll()
 function navBar(){
     let aNavList = document.querySelectorAll("#navbar a");
     let bLine    = document.querySelectorAll(".bline")
@@ -57,6 +57,13 @@ function navBar(){
 
 navBar()
 
+function p1Time(){
+    const d = new Date();
+    console.log(Math.floor(12/12))
+    document.querySelector("#local-time").innerHTML = `MY LOCAL  TIME ${d.getHours()}: ${d.getMinutes()} ${"<br>"} GMT (+${d.getHours()%12}:${d.getMinutes()} ${Math.floor(d.getHours()/12 )> 0 ? 'pm' :'am'})`
+}
+
+p1Time()
 function p2CardAnim(){
     gsap.from(".cards",{
         rotate:-25,
@@ -242,6 +249,8 @@ buttonAnim()
 
 function p7ListAnim(){
 
+    
+
     document.querySelectorAll("#p7-list li").forEach(function(elem){
 
         elem.addEventListener("mouseenter",function(){
@@ -259,6 +268,7 @@ function p7ListAnim(){
                 opacity:1
             })
         })
+
 
         elem.addEventListener("mouseleave",function(){
             gsap.to(elem.children[0].children,{

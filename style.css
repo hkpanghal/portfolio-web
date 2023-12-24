@@ -311,7 +311,7 @@ box-sizing: border-box;
 .commonpart2{
     width: 100%;
 }
-#page4 span{
+.commonpart span{
     font-family: Mazius;
 }
 .commonpart .upper #up1 ,.commonpart .upper #up2{
@@ -462,14 +462,14 @@ box-sizing: border-box;
 }
 
 #page7{
-    min-height: 100vh;
+    min-height: 110vh;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 2vw 5vw;
-    gap: 15vw;
+    padding: 1vw 5vw;
+    gap: 10vw;
 
 }
 
@@ -477,25 +477,27 @@ box-sizing: border-box;
     list-style:none;
     width: fit-content;
     transform: translate(100%,30%);
+    height: fit-content;
 }
 #page7 ol li{
     width: fit-content;
     line-height: 0.9;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #page7 ol .l0{
    opacity: 0;
 }
 #page7 ol li h3{
-    font-size: x-large;
     font-family: Gilroy-Medium;
     text-transform: uppercase;
     margin: 7px;
     font-weight:50;
+    
 }
 #page7 ol li h3 span{
     color: #14cf93;
     opacity: 0;
+
 }
 #page7 ol li p{
     padding-bottom: 10px;
@@ -523,6 +525,7 @@ box-sizing: border-box;
     position: relative;
     z-index: 1;
     font-family: Gilroy-Medium;
+    margin-top: 5vw;
 }
 #page7 button span{
     position: absolute;
@@ -569,6 +572,7 @@ box-sizing: border-box;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    gap: 5vw;
 }
 #page8 #middle h1{
     font-family: Gilroy-Medium;
@@ -582,7 +586,7 @@ box-sizing: border-box;
 #page8 #middle p{
     font-family: Gilroy-Semi;
     font-size: medium;
-    margin-right: 30%;
+    margin-right: 15vw;
     color: #11111150;
 }
 #page8 #bottom{
@@ -677,12 +681,22 @@ box-sizing: border-box;
     font-weight: 300;
 }
 #page9 #p9left img{
+    width: 100%;
+    height: 100%;
+    transition: scale ease 0.5s;
+   
+}
+#page9 #zoom{
+    overflow: hidden;
     height: 25vw;
     width: 25vw;
-    border-radius: 20px;
     margin: 1.5vw 0;
+    border-radius: 20px;
 }
-
+#page9 #zoom img:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
 footer{
     min-height: 120vh;
     width: 100%;
@@ -1228,11 +1242,12 @@ footer .fbottom p{
         color: #11111150;
         font-weight: 300;
     }
-    #page9 #p9left img{
+    #page9 #zoom{
+        overflow: hidden;
         height: 60%;
         width: 70%;
-        border-radius: 20px;
         margin: 1.5vw 0;
+        border-radius: 20px;
     }
     footer{
         min-height: 100vh;
