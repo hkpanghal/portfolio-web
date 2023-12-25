@@ -33,7 +33,7 @@ ScrollTrigger.refresh();
 
 }
 
-// smoothScroll()
+smoothScroll()
 function navBar(){
     let aNavList = document.querySelectorAll("#navbar a");
     let bLine    = document.querySelectorAll(".bline")
@@ -82,7 +82,7 @@ function p2AboutAnim(){
     gsap.from("#page2 #about-section ",{
         x:"-100%",
         // duration:1,
-        delay:-1,
+        // delay:-1,
         ease:Expo.in,
         scrollTrigger:{
             scroller:"body #main",
@@ -298,4 +298,64 @@ function fadeMe(){
     })
 }
 // fadeMe()
+
+function animateSVG(){
+   
+    document.querySelectorAll("#Visual .movedot").forEach(function(e){
+       var character = e
+       // console.log(e.getTotalLength());
+       e.style.strokeDasharray = 1000+"px";
+       e.style.strokeDashoffset = 1000+"px";
+    })
+ 
+    gsap.to("#Visual .movedot",{
+       strokeDashoffset:0,
+       duration:3,
+       ease:Expo.easeInOut,
+       delay:3.5
+    })
+ }
+
+ function p1TextAnim(){
+
+     let t = gsap.timeline();
+    
+    t.from(".h1span",{
+       x:200,
+       duration:1,
+       stagger:0.15,
+       ease:Power3.easeInOut,
+       delay:0.5,
+    })
+    t.to("#header h1,.uh4",{
+       y:-100,
+       ease:Power3.easeInOut,
+       duration:1
+    })
+    t.to("#loader #part1,#loader #part2",{
+       height:0,
+       stagger:0.25,
+    })
+    
+    
+    
+    t.to("#loader",{
+       display:"none",
+       duration:0.5,
+       y:-500,
+       opacity:0,
+       delay:0.6,
+       
+    })
+    
+    t.from(".dtu",{
+        y:"150%",
+        rotate:10,
+        stagger:0.15,
+        delay:-1,
+        onComplete:animateSVG()
+    })
+ }
+
+ p1TextAnim()
 
